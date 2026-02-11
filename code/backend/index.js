@@ -31,6 +31,7 @@ const requestLogger = (request, response, next) => {
 app.use(cors());
 app.use(express.json());
 app.use(requestLogger);
+app.use(express.static("dist"));
 
 app.get("/", (request, response) => {
   response.send("<h1>Hello World!</h1>");
@@ -56,12 +57,6 @@ app.delete("/api/notes/:id", (request, response) => {
   notes = notes.filter((note) => note.id !== id);
 
   response.status(204).end();
-});
-
-app.post("/api/notes", (request, response) => {
-  const note = request.body;
-  console.log(note);
-  response.json(note);
 });
 
 const generateId = () => {
