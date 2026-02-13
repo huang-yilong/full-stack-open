@@ -3,6 +3,6 @@ Host: localhost:3001
 Content-Type: application/json
 
 {
-  "name": "test2",
+  "name": "test8",
   "number": "123-45-678"
 }
