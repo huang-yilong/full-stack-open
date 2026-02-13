@@ -68,7 +68,6 @@ const App = () => {
               message: `Failed to update ${existingPerson.name}`,
               type: "error",
             });
-            setPersons(persons.filter((p) => p.id !== existingPerson.id));
             setTimeout(() => {
               setNotification(null);
             }, 5000);
@@ -89,9 +88,11 @@ const App = () => {
           setNotification(null);
         }, 5000);
       })
-      .catch(() => {
+      .catch((error) => {
+        // this is the way to access the error message
+        console.log(error.response.data.error);
         setNotification({
-          message: `Failed to add ${newPerson.name}`,
+          message: error.response.data.error,
           type: "error",
         });
       });
