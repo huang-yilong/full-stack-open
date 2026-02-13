@@ -1,3 +1,4 @@
+require('dotenv').config()
 const mongoose = require('mongoose')
 
 if (process.argv.length < 3) {
@@ -5,11 +6,7 @@ if (process.argv.length < 3) {
   process.exit(1)
 }
 
-const password = process.argv[2]
-
-// const url = `mongodb+srv://202221045517_db_user:zIcnJyOOnXAkuioc@cluster0.colfckh.mongodb.net/noteApp?appName=Cluster0`;
-
-const url = `mongodb+srv://202221045517_db_user:${password}@cluster0.colfckh.mongodb.net/personApp?appName=Cluster0`
+const url = process.env.MONGODB_URI
 
 const clientOptions = {
   serverApi: { version: '1', strict: true, deprecationErrors: true },
