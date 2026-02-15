@@ -1,5 +1,5 @@
-require("dotenv").config();
-const mongoose = require("mongoose");
+require('dotenv').config()
+const mongoose = require('mongoose')
 
 // if (process.argv.length < 3) {
 //   console.log("give password as argument");
@@ -8,20 +8,20 @@ const mongoose = require("mongoose");
 
 // const password = process.argv[2];
 
-const url = process.env.MONGODB_URI;
+const url = process.env.MONGODB_URI
 
 const clientOptions = {
-  serverApi: { version: "1", strict: true, deprecationErrors: true },
-};
+  serverApi: { version: '1', strict: true, deprecationErrors: true },
+}
 
-mongoose.connect(url, clientOptions);
+mongoose.connect(url, clientOptions)
 
 const noteSchema = new mongoose.Schema({
   content: String,
   important: Boolean,
-});
+})
 
-const Note = mongoose.model("Note", noteSchema);
+const Note = mongoose.model('Note', noteSchema)
 
 // const note = new Note({
 //   content: "HTML is easy",
@@ -35,7 +35,7 @@ const Note = mongoose.model("Note", noteSchema);
 
 Note.find({ important: true }).then((result) => {
   result.forEach((note) => {
-    console.log(note);
-  });
-  mongoose.connection.close();
-});
+    console.log(note)
+  })
+  mongoose.connection.close()
+})
