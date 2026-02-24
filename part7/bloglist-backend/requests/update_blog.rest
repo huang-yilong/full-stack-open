@@ -1,0 +1,11 @@
+PUT http://localhost:3003/api/blogs/6995399232d1855bff6529e3
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJvb3QiLCJpZCI6IjY5OTA3OWNjMDYxNzA4MmM3MTkwN2JmNCIsImlhdCI6MTc3MTM4NzI0OSwiZXhwIjoxNzcxMzkwODQ5fQ.rFLQgYolS-j6t0wlsc7JK_SIGRriRbovFpT6XTt9RpI
+
+{
+    "title": "test-like",
+    "author": "test",
+    "url": "http://example.com/test-like",
+    "likes": 10,
+    "user": "699079cc0617082c71907bf4"
+}

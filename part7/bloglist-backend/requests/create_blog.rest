@@ -1,0 +1,9 @@
+POST http://localhost:3003/api/blogs
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwiaWQiOiI2OTlkMWQ4YjI3Njc0MGNjNzJiZGUzOTEiLCJpYXQiOjE3NzE5MTg1NTMsImV4cCI6MTc3MTkyMjE1M30.BmGai6mdEPK-AIgMF5ekY8tM448WBI0pO34GmNeMuWQ
+
+{
+    "title": "test-create",
+    "author": "test",
+    "url": "http://example.com/test-create"
+}
