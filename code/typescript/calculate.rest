@@ -1,0 +1,8 @@
+POST http://localhost:3003/calculate
+Content-Type: application/json
+
+{
+  "value1": 5,
+  "value2": 10,
+  "op": "add"
+}

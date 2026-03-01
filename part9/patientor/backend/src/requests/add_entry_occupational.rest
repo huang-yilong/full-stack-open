@@ -1,0 +1,16 @@
+### Add Occupational Healthcare Entry
+POST http://localhost:3001/api/patients/d2773336-f723-11e9-8f0b-362b9e155667/entries
+Content-Type: application/json
+
+{
+  "type": "OccupationalHealthcare",
+  "description": "Regular workplace health check",
+  "date": "2024-03-15",
+  "specialist": "Dr. Workplace",
+  "employerName": "Tech Corp",
+  "diagnosisCodes": ["Z04.3"],
+  "sickLeave": {
+    "startDate": "2024-03-16",
+    "endDate": "2024-03-17"
+  }
+}

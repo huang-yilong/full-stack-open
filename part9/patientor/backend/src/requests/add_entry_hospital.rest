@@ -1,0 +1,15 @@
+### Add Hospital Entry
+POST http://localhost:3001/api/patients/d2773336-f723-11e9-8f0b-362b9e155667/entries
+Content-Type: application/json
+
+{
+  "type": "Hospital",
+  "description": "Emergency surgery due to accident",
+  "date": "2024-03-20",
+  "specialist": "Dr. Emergency",
+  "diagnosisCodes": ["S06.0", "S72.0"],
+  "discharge": {
+    "date": "2024-03-25",
+    "criteria": "Patient recovered and stable"
+  }
+}
